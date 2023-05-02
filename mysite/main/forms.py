@@ -5,7 +5,7 @@ from .models import Book, Contact
 
 
 class NewUserForm(UserCreationForm):
-	email = forms.EmailField(required=True)
+	email = forms.EmailField(max_length=200, help_text='Required')
 
 	class Meta:
 		model = User
